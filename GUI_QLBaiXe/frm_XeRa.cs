@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace GUI_QLBaiXe
 {
-    public partial class Form1 : Form
+    public partial class frm_XeRa : Form
     {
-        public Form1()
+        public frm_XeRa()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,14 +45,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Frm_LoaiXe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Frm_LoaiXe.Designer.cs">
+      <DependentUpon>Frm_LoaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_NhanVien.Designer.cs">
+      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TheXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TheXe.Designer.cs">
+      <DependentUpon>Frm_TheXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_XeRa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XeRa.Designer.cs">
+      <DependentUpon>frm_XeRa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_XeVao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XeVao.Designer.cs">
+      <DependentUpon>frm_XeVao.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_LoaiXe.resx">
+      <DependentUpon>Frm_LoaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NhanVien.resx">
+      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TheXe.resx">
+      <DependentUpon>Frm_TheXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XeRa.resx">
+      <DependentUpon>frm_XeRa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XeVao.resx">
+      <DependentUpon>frm_XeVao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
