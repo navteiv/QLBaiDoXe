@@ -61,5 +61,22 @@ namespace GUI_QLBaiXe
             frmXeRa.Dock = DockStyle.Fill;
             frmXeRa.Show();
         }
+        Frm_TimKiem frmSearch = new Frm_TimKiem();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmSearch.TopLevel = false;
+            panel1.Controls.Add(frmSearch);
+            frmSearch.Dock = DockStyle.Fill;
+            frmSearch.Show();
+        }
+        Frm_DoanhThu frmDoanhThu = new Frm_DoanhThu();
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmDoanhThu.TopLevel = false;
+            panel1.Controls.Add(frmDoanhThu);
+            frmDoanhThu.Dock = DockStyle.Fill;
+            frmDoanhThu.Show();
+        }
     }
 }

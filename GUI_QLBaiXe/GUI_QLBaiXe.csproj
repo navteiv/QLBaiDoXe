@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_DoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DoanhThu.Designer.cs">
+      <DependentUpon>Frm_DoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_LoaiXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     <Compile Include="Frm_TheXe.Designer.cs">
       <DependentUpon>Frm_TheXe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TimKiem.Designer.cs">
+      <DependentUpon>Frm_TimKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XeRa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_DoanhThu.resx">
+      <DependentUpon>Frm_DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_LoaiXe.resx">
       <DependentUpon>Frm_LoaiXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_TheXe.resx">
       <DependentUpon>Frm_TheXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TimKiem.resx">
+      <DependentUpon>Frm_TimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_XeRa.resx">
       <DependentUpon>frm_XeRa.cs</DependentUpon>

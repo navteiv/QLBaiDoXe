@@ -42,9 +42,13 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -93,6 +97,8 @@
             this.iconsList.Images.SetKeyName(0, "bank-card-back-side.png");
             this.iconsList.Images.SetKeyName(1, "motorcycle-icon-trendy-design-sticker-1577491703.849943.png");
             this.iconsList.Images.SetKeyName(2, "person-male.png");
+            this.iconsList.Images.SetKeyName(3, "search-131964753234672616.png");
+            this.iconsList.Images.SetKeyName(4, "file-icons-free-download-png-and-svg-file-icon-png-256_256.png");
             // 
             // btnLX
             // 
@@ -160,6 +166,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1043, 142);
@@ -169,6 +176,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1043, 142);
@@ -184,6 +192,34 @@
             this.panel1.Size = new System.Drawing.Size(1051, 272);
             this.panel1.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.ImageIndex = 3;
+            this.button2.ImageList = this.iconsList;
+            this.button2.Location = new System.Drawing.Point(8, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 130);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Tìm kiếm thông tin";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.ImageIndex = 4;
+            this.button3.ImageList = this.iconsList;
+            this.button3.Location = new System.Drawing.Point(8, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 130);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Thống kê doanh thu";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -198,6 +234,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,6 +254,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnXeVao;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
