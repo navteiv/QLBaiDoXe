@@ -75,11 +75,11 @@
     <Compile Include="Frm_TheXe.Designer.cs">
       <DependentUpon>Frm_TheXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_TimKiem.cs">
+    <Compile Include="Frm_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_TimKiem.Designer.cs">
-      <DependentUpon>Frm_TimKiem.cs</DependentUpon>
+    <Compile Include="Frm_Search.Designer.cs">
+      <DependentUpon>Frm_Search.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_XeRa.cs">
       <SubType>Form</SubType>
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="Frm_TheXe.resx">
       <DependentUpon>Frm_TheXe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_TimKiem.resx">
-      <DependentUpon>Frm_TimKiem.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Search.resx">
+      <DependentUpon>Frm_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_XeRa.resx">
       <DependentUpon>frm_XeRa.cs</DependentUpon>

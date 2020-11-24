@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_QLBaiXe
 {
-    public partial class Frm_TimKiem : Form
+    public partial class Frm_Search : Form
     {
-        public Frm_TimKiem()
+        public Frm_Search()
         {
             InitializeComponent();
         }

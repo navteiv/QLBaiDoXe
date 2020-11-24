@@ -61,7 +61,7 @@ namespace GUI_QLBaiXe
             frmXeRa.Dock = DockStyle.Fill;
             frmXeRa.Show();
         }
-        Frm_TimKiem frmSearch = new Frm_TimKiem();
+        Frm_Search frmSearch = new Frm_Search();
         private void button2_Click(object sender, EventArgs e)
         {
             frmSearch.TopLevel = false;

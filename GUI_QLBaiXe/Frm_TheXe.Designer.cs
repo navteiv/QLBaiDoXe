@@ -34,7 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.iconsList = new System.Windows.Forms.ImageList(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,11 +47,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.iconsList = new System.Windows.Forms.ImageList(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sothe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaydk = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,12 +76,46 @@
             this.panel1.Size = new System.Drawing.Size(1328, 292);
             this.panel1.TabIndex = 64;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(658, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 20);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "Tình trạng";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(782, 143);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(500, 22);
+            this.textBox4.TabIndex = 74;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(633, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 20);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Ngày hết hạn";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(782, 103);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(500, 22);
+            this.textBox3.TabIndex = 72;
+            // 
             // button4
             // 
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.ImageIndex = 19;
             this.button4.ImageList = this.iconsList;
-            this.button4.Location = new System.Drawing.Point(925, 197);
+            this.button4.Location = new System.Drawing.Point(1214, 201);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 56);
             this.button4.TabIndex = 71;
@@ -89,12 +123,37 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // iconsList
+            // 
+            this.iconsList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconsList.ImageStream")));
+            this.iconsList.TransparentColor = System.Drawing.Color.Transparent;
+            this.iconsList.Images.SetKeyName(0, "46271.png");
+            this.iconsList.Images.SetKeyName(1, "1375593-200.png");
+            this.iconsList.Images.SetKeyName(2, "108282279_899258063911620_5053503532840909895_n.png");
+            this.iconsList.Images.SetKeyName(3, "bank-card-back-side.png");
+            this.iconsList.Images.SetKeyName(4, "cross+exit+remove+icon-1320161389317562876.png");
+            this.iconsList.Images.SetKeyName(5, "file-icons-free-download-png-and-svg-file-icon-png-256_256.png");
+            this.iconsList.Images.SetKeyName(6, "icon-customer-0.jpg");
+            this.iconsList.Images.SetKeyName(7, "icons_next-512 - Copy.png");
+            this.iconsList.Images.SetKeyName(8, "img_90938.png");
+            this.iconsList.Images.SetKeyName(9, "img_297675.png");
+            this.iconsList.Images.SetKeyName(10, "motorcycle-icon-trendy-design-sticker-1577491703.849943.png");
+            this.iconsList.Images.SetKeyName(11, "next.png");
+            this.iconsList.Images.SetKeyName(12, "Paomedia-Small-N-Flat-Floppy.ico");
+            this.iconsList.Images.SetKeyName(13, "person-male.png");
+            this.iconsList.Images.SetKeyName(14, "plus-icon-green-clip-art-clkerm-vector-clip-art-0.png");
+            this.iconsList.Images.SetKeyName(15, "pre (2).png");
+            this.iconsList.Images.SetKeyName(16, "pre.png");
+            this.iconsList.Images.SetKeyName(17, "search-131964753234672616.png");
+            this.iconsList.Images.SetKeyName(18, "signin1.png");
+            this.iconsList.Images.SetKeyName(19, "unnamed.png");
+            // 
             // button3
             // 
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.ImageIndex = 8;
             this.button3.ImageList = this.iconsList;
-            this.button3.Location = new System.Drawing.Point(775, 197);
+            this.button3.Location = new System.Drawing.Point(1064, 201);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 56);
             this.button3.TabIndex = 70;
@@ -107,7 +166,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageIndex = 12;
             this.button2.ImageList = this.iconsList;
-            this.button2.Location = new System.Drawing.Point(628, 197);
+            this.button2.Location = new System.Drawing.Point(917, 201);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 56);
             this.button2.TabIndex = 69;
@@ -120,7 +179,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageIndex = 14;
             this.button1.ImageList = this.iconsList;
-            this.button1.Location = new System.Drawing.Point(475, 197);
+            this.button1.Location = new System.Drawing.Point(764, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 56);
             this.button1.TabIndex = 68;
@@ -161,65 +220,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(500, 22);
             this.textBox1.TabIndex = 64;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(633, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 20);
-            this.label3.TabIndex = 73;
-            this.label3.Text = "Ngày hết hạn";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(782, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(500, 22);
-            this.textBox3.TabIndex = 72;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(658, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 20);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "Tình trạng";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(782, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(500, 22);
-            this.textBox4.TabIndex = 74;
-            // 
-            // iconsList
-            // 
-            this.iconsList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconsList.ImageStream")));
-            this.iconsList.TransparentColor = System.Drawing.Color.Transparent;
-            this.iconsList.Images.SetKeyName(0, "46271.png");
-            this.iconsList.Images.SetKeyName(1, "1375593-200.png");
-            this.iconsList.Images.SetKeyName(2, "108282279_899258063911620_5053503532840909895_n.png");
-            this.iconsList.Images.SetKeyName(3, "bank-card-back-side.png");
-            this.iconsList.Images.SetKeyName(4, "cross+exit+remove+icon-1320161389317562876.png");
-            this.iconsList.Images.SetKeyName(5, "file-icons-free-download-png-and-svg-file-icon-png-256_256.png");
-            this.iconsList.Images.SetKeyName(6, "icon-customer-0.jpg");
-            this.iconsList.Images.SetKeyName(7, "icons_next-512 - Copy.png");
-            this.iconsList.Images.SetKeyName(8, "img_90938.png");
-            this.iconsList.Images.SetKeyName(9, "img_297675.png");
-            this.iconsList.Images.SetKeyName(10, "motorcycle-icon-trendy-design-sticker-1577491703.849943.png");
-            this.iconsList.Images.SetKeyName(11, "next.png");
-            this.iconsList.Images.SetKeyName(12, "Paomedia-Small-N-Flat-Floppy.ico");
-            this.iconsList.Images.SetKeyName(13, "person-male.png");
-            this.iconsList.Images.SetKeyName(14, "plus-icon-green-clip-art-clkerm-vector-clip-art-0.png");
-            this.iconsList.Images.SetKeyName(15, "pre (2).png");
-            this.iconsList.Images.SetKeyName(16, "pre.png");
-            this.iconsList.Images.SetKeyName(17, "search-131964753234672616.png");
-            this.iconsList.Images.SetKeyName(18, "signin1.png");
-            this.iconsList.Images.SetKeyName(19, "unnamed.png");
             // 
             // dataGridView1
             // 
