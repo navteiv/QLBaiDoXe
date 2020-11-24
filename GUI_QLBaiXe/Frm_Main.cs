@@ -78,5 +78,10 @@ namespace GUI_QLBaiXe
             frmDoanhThu.Dock = DockStyle.Fill;
             frmDoanhThu.Show();
         }
+
+        private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
