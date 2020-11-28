@@ -51,13 +51,23 @@ namespace GUI_QLBaiXe
 
         private void frm_XeVao_FormClosing(object sender, FormClosingEventArgs e)
         {
-            videoSourceTruoc.Stop();
+           // videoSourceTruoc.Stop();
+            this.Hide();
+            this.Parent = null;
+            e.Cancel = true;
+            if (videoSourceTruoc.IsRunning)
+            {
+                videoSourceTruoc.Stop();
+
+                picBoxCam.Image = null;
+                picBoxCam.Invalidate();
+            }
         }
 
-        private void frm_XeVao_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            videoSourceTruoc.Stop();
-        }
+        //private void frm_XeVao_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    videoSourceTruoc.Stop();
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {

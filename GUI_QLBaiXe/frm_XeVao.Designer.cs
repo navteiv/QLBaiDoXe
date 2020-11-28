@@ -231,7 +231,6 @@
             this.Name = "frm_XeVao";
             this.Text = "frm_XeVao";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_XeVao_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_XeVao_FormClosed);
             this.Load += new System.EventHandler(this.frm_XeVao_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

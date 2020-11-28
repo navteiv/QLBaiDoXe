@@ -33,12 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.iconsList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,14 +91,33 @@
             this.panel1.Size = new System.Drawing.Size(1388, 154);
             this.panel1.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // button2
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(671, 31);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.ImageIndex = 2;
+            this.button2.ImageList = this.iconsList;
+            this.button2.Location = new System.Drawing.Point(1136, 83);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 50);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "In danh sách";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.ImageIndex = 5;
+            this.button1.ImageList = this.iconsList;
+            this.button1.Location = new System.Drawing.Point(999, 83);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 50);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Thống kê";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
@@ -119,6 +138,15 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Tới ngày";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(671, 31);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
             // groupBox1
             // 
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -129,34 +157,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bản Báo Cáo";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 5;
-            this.button1.ImageList = this.iconsList;
-            this.button1.Location = new System.Drawing.Point(999, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 50);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Thống kê";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 2;
-            this.button2.ImageList = this.iconsList;
-            this.button2.Location = new System.Drawing.Point(1136, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 50);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "In danh sách";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Frm_DoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,6 +166,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Frm_DoanhThu";
             this.Text = "Frm_DoanhThu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_DoanhThu_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -26,5 +26,12 @@ namespace GUI_QLBaiXe
         {
 
         }
+
+        private void frm_XeRa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            this.Parent = null;
+            e.Cancel = true;
+        }
     }
 }

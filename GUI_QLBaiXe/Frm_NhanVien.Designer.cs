@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_NhanVien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_NhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.iconsList = new System.Windows.Forms.ImageList(this.components);
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,11 +55,6 @@
             this.cmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.iconsList = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,83 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1426, 251);
             this.panel1.TabIndex = 28;
+            // 
+            // button4
+            // 
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.ImageIndex = 19;
+            this.button4.ImageList = this.iconsList;
+            this.button4.Location = new System.Drawing.Point(1040, 167);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 56);
+            this.button4.TabIndex = 75;
+            this.button4.Text = "Xóa";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // iconsList
+            // 
+            this.iconsList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconsList.ImageStream")));
+            this.iconsList.TransparentColor = System.Drawing.Color.Transparent;
+            this.iconsList.Images.SetKeyName(0, "46271.png");
+            this.iconsList.Images.SetKeyName(1, "1375593-200.png");
+            this.iconsList.Images.SetKeyName(2, "108282279_899258063911620_5053503532840909895_n.png");
+            this.iconsList.Images.SetKeyName(3, "bank-card-back-side.png");
+            this.iconsList.Images.SetKeyName(4, "cross+exit+remove+icon-1320161389317562876.png");
+            this.iconsList.Images.SetKeyName(5, "file-icons-free-download-png-and-svg-file-icon-png-256_256.png");
+            this.iconsList.Images.SetKeyName(6, "icon-customer-0.jpg");
+            this.iconsList.Images.SetKeyName(7, "icons_next-512 - Copy.png");
+            this.iconsList.Images.SetKeyName(8, "img_90938.png");
+            this.iconsList.Images.SetKeyName(9, "img_297675.png");
+            this.iconsList.Images.SetKeyName(10, "motorcycle-icon-trendy-design-sticker-1577491703.849943.png");
+            this.iconsList.Images.SetKeyName(11, "next.png");
+            this.iconsList.Images.SetKeyName(12, "Paomedia-Small-N-Flat-Floppy.ico");
+            this.iconsList.Images.SetKeyName(13, "person-male.png");
+            this.iconsList.Images.SetKeyName(14, "plus-icon-green-clip-art-clkerm-vector-clip-art-0.png");
+            this.iconsList.Images.SetKeyName(15, "pre (2).png");
+            this.iconsList.Images.SetKeyName(16, "pre.png");
+            this.iconsList.Images.SetKeyName(17, "search-131964753234672616.png");
+            this.iconsList.Images.SetKeyName(18, "signin1.png");
+            this.iconsList.Images.SetKeyName(19, "unnamed.png");
+            // 
+            // button3
+            // 
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.ImageIndex = 8;
+            this.button3.ImageList = this.iconsList;
+            this.button3.Location = new System.Drawing.Point(890, 167);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 56);
+            this.button3.TabIndex = 74;
+            this.button3.Text = "Sửa";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.ImageIndex = 12;
+            this.button2.ImageList = this.iconsList;
+            this.button2.Location = new System.Drawing.Point(743, 167);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 56);
+            this.button2.TabIndex = 73;
+            this.button2.Text = "Lưu";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.ImageIndex = 14;
+            this.button1.ImageList = this.iconsList;
+            this.button1.Location = new System.Drawing.Point(590, 167);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 56);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Thêm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -234,83 +311,6 @@
             this.diachi.HeaderText = "Địa Chỉ";
             this.diachi.Name = "diachi";
             // 
-            // button4
-            // 
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.ImageIndex = 19;
-            this.button4.ImageList = this.iconsList;
-            this.button4.Location = new System.Drawing.Point(1040, 167);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 56);
-            this.button4.TabIndex = 75;
-            this.button4.Text = "Xóa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageIndex = 8;
-            this.button3.ImageList = this.iconsList;
-            this.button3.Location = new System.Drawing.Point(890, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 56);
-            this.button3.TabIndex = 74;
-            this.button3.Text = "Sửa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 12;
-            this.button2.ImageList = this.iconsList;
-            this.button2.Location = new System.Drawing.Point(743, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 56);
-            this.button2.TabIndex = 73;
-            this.button2.Text = "Lưu";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 14;
-            this.button1.ImageList = this.iconsList;
-            this.button1.Location = new System.Drawing.Point(590, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 56);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // iconsList
-            // 
-            this.iconsList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconsList.ImageStream")));
-            this.iconsList.TransparentColor = System.Drawing.Color.Transparent;
-            this.iconsList.Images.SetKeyName(0, "46271.png");
-            this.iconsList.Images.SetKeyName(1, "1375593-200.png");
-            this.iconsList.Images.SetKeyName(2, "108282279_899258063911620_5053503532840909895_n.png");
-            this.iconsList.Images.SetKeyName(3, "bank-card-back-side.png");
-            this.iconsList.Images.SetKeyName(4, "cross+exit+remove+icon-1320161389317562876.png");
-            this.iconsList.Images.SetKeyName(5, "file-icons-free-download-png-and-svg-file-icon-png-256_256.png");
-            this.iconsList.Images.SetKeyName(6, "icon-customer-0.jpg");
-            this.iconsList.Images.SetKeyName(7, "icons_next-512 - Copy.png");
-            this.iconsList.Images.SetKeyName(8, "img_90938.png");
-            this.iconsList.Images.SetKeyName(9, "img_297675.png");
-            this.iconsList.Images.SetKeyName(10, "motorcycle-icon-trendy-design-sticker-1577491703.849943.png");
-            this.iconsList.Images.SetKeyName(11, "next.png");
-            this.iconsList.Images.SetKeyName(12, "Paomedia-Small-N-Flat-Floppy.ico");
-            this.iconsList.Images.SetKeyName(13, "person-male.png");
-            this.iconsList.Images.SetKeyName(14, "plus-icon-green-clip-art-clkerm-vector-clip-art-0.png");
-            this.iconsList.Images.SetKeyName(15, "pre (2).png");
-            this.iconsList.Images.SetKeyName(16, "pre.png");
-            this.iconsList.Images.SetKeyName(17, "search-131964753234672616.png");
-            this.iconsList.Images.SetKeyName(18, "signin1.png");
-            this.iconsList.Images.SetKeyName(19, "unnamed.png");
-            // 
             // Frm_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,6 +322,7 @@
             this.Name = "Frm_NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_NhanVien";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_NhanVien_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

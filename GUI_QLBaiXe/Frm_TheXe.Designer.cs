@@ -291,6 +291,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Frm_TheXe";
             this.Text = "Frm_TheXe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_TheXe_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

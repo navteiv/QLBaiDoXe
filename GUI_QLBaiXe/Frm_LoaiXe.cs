@@ -17,24 +17,11 @@ namespace GUI_QLBaiXe
             InitializeComponent();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void Frm_LoaiXe_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            this.Parent = null;
+            e.Cancel = true;
         }
     }
 }
