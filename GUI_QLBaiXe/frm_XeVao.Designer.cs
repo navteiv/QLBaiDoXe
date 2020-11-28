@@ -30,6 +30,7 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbCamera = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picBoxCam = new System.Windows.Forms.PictureBox();
-            this.cbbCamera = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -78,6 +78,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1286, 162);
             this.panel1.TabIndex = 1;
+            // 
+            // cbbCamera
+            // 
+            this.cbbCamera.FormattingEnabled = true;
+            this.cbbCamera.Location = new System.Drawing.Point(478, 119);
+            this.cbbCamera.Name = "cbbCamera";
+            this.cbbCamera.Size = new System.Drawing.Size(568, 24);
+            this.cbbCamera.TabIndex = 11;
             // 
             // label6
             // 
@@ -123,6 +131,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label2
             // 
@@ -210,14 +219,6 @@
             this.picBoxCam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxCam.TabIndex = 0;
             this.picBoxCam.TabStop = false;
-            // 
-            // cbbCamera
-            // 
-            this.cbbCamera.FormattingEnabled = true;
-            this.cbbCamera.Location = new System.Drawing.Point(478, 119);
-            this.cbbCamera.Name = "cbbCamera";
-            this.cbbCamera.Size = new System.Drawing.Size(568, 24);
-            this.cbbCamera.TabIndex = 11;
             // 
             // frm_XeVao
             // 

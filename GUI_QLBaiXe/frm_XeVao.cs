@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using System.IO;
 
 namespace GUI_QLBaiXe
 {
@@ -63,5 +64,32 @@ namespace GUI_QLBaiXe
             //PictureBox1.Image = DirectCast(eventArgs.Frame.Clone(), Bitmap)
             pictureBox2.Image = picBoxCam.Image;
         }
+
+      
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                pictureBox2.Image = picBoxCam.Image;
+                this.ActiveControl = textBox3;
+                Bitmap img = (Bitmap)pictureBox2.Image;
+            }
+        }
+        // Convert -> ByteArray to save DataBase
+        public byte[] ImageToByteArray(Image img)
+        {
+            byte[] b;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                b = ms.ToArray();
+            }
+            return b;
+        }
+        public byte[] GetImg()
+        {
+            return ImageToByteArray((Image)pictureBox2.Image.Clone());
+        }
+
     }
 }
