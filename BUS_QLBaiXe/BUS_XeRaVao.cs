@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUS_QLBaiXe
 {
-    class BUS_XeRaVao
+    public class BUS_XeRaVao
     {
         public int ID { get; set; }
         public DateTime ngayGioVao { get; set; }
@@ -15,8 +15,7 @@ namespace BUS_QLBaiXe
         public string soThe { get; set; }
         public string maNV { get; set; }
         public string bienSoXe { get; set; }
-        public string anhTruoc { get; set; }
-        public string anhSau { get; set; }
+        public byte[] anhTruoc { get; set; }
         public bool tinhTrangXe { get; set; }
     }
 }

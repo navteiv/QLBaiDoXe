@@ -151,5 +151,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_QLBaiXe\BUS_QLBaiXe.csproj">
+      <Project>{4ef483a0-10eb-47d5-a915-e85391b4e400}</Project>
+      <Name>BUS_QLBaiXe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL_QLBaiXe\DAL_QLBaiXe.csproj">
+      <Project>{ae75176f-a2f0-47e0-84f3-1d64754fbf1b}</Project>
+      <Name>DAL_QLBaiXe</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

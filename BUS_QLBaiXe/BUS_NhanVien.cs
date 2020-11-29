@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUS_QLBaiXe
 {
-    class BUS_NhanVien
+    public class BUS_NhanVien
     {
         public string maNV { get; set; }
         public string matKhau { get; set; }

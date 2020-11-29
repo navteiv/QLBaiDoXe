@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUS_QLBaiXe
 {
-    class BUS_The
+    public class BUS_The
     {
         public string soThe { get; set; }
         public DateTime ngayDK { get; set; }

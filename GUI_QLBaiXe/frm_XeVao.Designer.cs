@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbLoaiXe = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbbCamera = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnTiepNhan = new System.Windows.Forms.Button();
+            this.txtBienSo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSoThe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,28 +51,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCam)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbLoaiXe
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbLoaiXe.FormattingEnabled = true;
+            this.cbLoaiXe.Items.AddRange(new object[] {
             "Xe máy"});
-            this.comboBox1.Location = new System.Drawing.Point(478, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 24);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Xe máy";
+            this.cbLoaiXe.Location = new System.Drawing.Point(478, 33);
+            this.cbLoaiXe.Name = "cbLoaiXe";
+            this.cbLoaiXe.Size = new System.Drawing.Size(219, 24);
+            this.cbLoaiXe.TabIndex = 0;
+            this.cbLoaiXe.Text = "Xe máy";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cbbCamera);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.btnTiepNhan);
+            this.panel1.Controls.Add(this.txtBienSo);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtSoThe);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbLoaiXe);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -97,23 +97,23 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Chọn Camera";
             // 
-            // button1
+            // btnTiepNhan
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1088, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 67);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Tiếp nhận";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTiepNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTiepNhan.Location = new System.Drawing.Point(1088, 33);
+            this.btnTiepNhan.Name = "btnTiepNhan";
+            this.btnTiepNhan.Size = new System.Drawing.Size(124, 67);
+            this.btnTiepNhan.TabIndex = 8;
+            this.btnTiepNhan.Text = "Tiếp nhận";
+            this.btnTiepNhan.UseVisualStyleBackColor = true;
+            this.btnTiepNhan.Click += new System.EventHandler(this.btnTiepNhan_Click);
             // 
-            // textBox3
+            // txtBienSo
             // 
-            this.textBox3.Location = new System.Drawing.Point(820, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 22);
-            this.textBox3.TabIndex = 7;
+            this.txtBienSo.Location = new System.Drawing.Point(820, 78);
+            this.txtBienSo.Name = "txtBienSo";
+            this.txtBienSo.Size = new System.Drawing.Size(226, 22);
+            this.txtBienSo.TabIndex = 7;
             // 
             // label4
             // 
@@ -125,13 +125,13 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Biển số";
             // 
-            // textBox1
+            // txtSoThe
             // 
-            this.textBox1.Location = new System.Drawing.Point(478, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtSoThe.Location = new System.Drawing.Point(478, 78);
+            this.txtSoThe.Name = "txtSoThe";
+            this.txtSoThe.Size = new System.Drawing.Size(219, 22);
+            this.txtSoThe.TabIndex = 3;
+            this.txtSoThe.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label2
             // 
@@ -245,16 +245,16 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbLoaiXe;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnTiepNhan;
+        private System.Windows.Forms.TextBox txtBienSo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSoThe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox picBoxCam;

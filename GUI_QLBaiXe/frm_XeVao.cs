@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using System.IO;
+using DAL_QLBaiXe;
+using BUS_QLBaiXe;
 
 namespace GUI_QLBaiXe
 {
@@ -20,7 +22,8 @@ namespace GUI_QLBaiXe
             InitializeComponent();
         }
         FilterInfoCollection filterInfoCollection;
-        VideoCaptureDevice videoSourceTruoc = new VideoCaptureDevice();
+        public static VideoCaptureDevice videoSourceTruoc = new VideoCaptureDevice();
+        DAL_XeRaVao dll = new DAL_XeRaVao();
         void VideoSourceTruoc_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             picBoxCam.Image = (Bitmap)eventArgs.Frame.Clone();
@@ -50,7 +53,7 @@ namespace GUI_QLBaiXe
         }
 
         private void frm_XeVao_FormClosing(object sender, FormClosingEventArgs e)
-        {
+        { 
            // videoSourceTruoc.Stop();
             this.Hide();
             this.Parent = null;
@@ -81,7 +84,7 @@ namespace GUI_QLBaiXe
             if (e.KeyCode == Keys.Enter)
             {
                 pictureBox2.Image = picBoxCam.Image;
-                this.ActiveControl = textBox3;
+                this.ActiveControl = txtBienSo;
                 Bitmap img = (Bitmap)pictureBox2.Image;
             }
         }
@@ -101,5 +104,25 @@ namespace GUI_QLBaiXe
             return ImageToByteArray((Image)pictureBox2.Image.Clone());
         }
 
+        private void btnTiepNhan_Click(object sender, EventArgs e)
+        {
+            GetImg();
+            try
+            {
+                BUS_XeRaVao ck = new BUS_XeRaVao();
+                ck.ngayGioVao = DateTime.Now;
+                ck.maLoai = cbLoaiXe.SelectedValue.ToString();
+                ck.soThe = txtSoThe.Text.ToUpper();
+                //ck.maNV = frm_DangNhap.MANV;
+                ck.bienSoXe = txtBienSo.Text;
+                ck.anhTruoc = GetImg();
+                dll.XeVao(ck);
+                MessageBox.Show("Thành công.", "Tiếp nhận xe vào bãi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                txtSoThe.Text = "";
+                txtBienSo.Text = "";
+            }
+            catch (Exception)
+            { }
+        }
     }
 }
