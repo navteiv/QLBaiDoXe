@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_TheXe.cs" />
     <Compile Include="DAL_XeRaVao.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

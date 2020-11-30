@@ -34,47 +34,73 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
+            this.txtNgayKT = new System.Windows.Forms.DateTimePicker();
+            this.txtNgayDK = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.btnDel = new System.Windows.Forms.Button();
             this.iconsList = new System.Windows.Forms.ImageList(this.components);
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sothe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaydk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayhh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhtrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSoThe = new System.Windows.Forms.TextBox();
+            this.dgvTheXe = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheXe)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbbStatus);
+            this.panel1.Controls.Add(this.txtNgayKT);
+            this.panel1.Controls.Add(this.txtNgayDK);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.lbl2);
+            this.panel1.Controls.Add(this.btnDel);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.lbl);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtSoThe);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1328, 292);
             this.panel1.TabIndex = 64;
+            // 
+            // cbbStatus
+            // 
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Items.AddRange(new object[] {
+            "Đang sử dụng",
+            "Đang chờ cấp",
+            "Thẻ hỏng"});
+            this.cbbStatus.Location = new System.Drawing.Point(782, 143);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(500, 24);
+            this.cbbStatus.TabIndex = 78;
+            // 
+            // txtNgayKT
+            // 
+            this.txtNgayKT.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.txtNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgayKT.Location = new System.Drawing.Point(782, 101);
+            this.txtNgayKT.Name = "txtNgayKT";
+            this.txtNgayKT.Size = new System.Drawing.Size(500, 22);
+            this.txtNgayKT.TabIndex = 77;
+            // 
+            // txtNgayDK
+            // 
+            this.txtNgayDK.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.txtNgayDK.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgayDK.Location = new System.Drawing.Point(782, 60);
+            this.txtNgayDK.Name = "txtNgayDK";
+            this.txtNgayDK.Size = new System.Drawing.Size(500, 22);
+            this.txtNgayDK.TabIndex = 76;
             // 
             // label4
             // 
@@ -86,42 +112,29 @@
             this.label4.TabIndex = 75;
             this.label4.Text = "Tình trạng";
             // 
-            // textBox4
+            // lbl2
             // 
-            this.textBox4.Location = new System.Drawing.Point(782, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(500, 22);
-            this.textBox4.TabIndex = 74;
+            this.lbl2.AutoSize = true;
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(633, 103);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(119, 20);
+            this.lbl2.TabIndex = 73;
+            this.lbl2.Text = "Ngày hết hạn";
             // 
-            // label3
+            // btnDel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(633, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 20);
-            this.label3.TabIndex = 73;
-            this.label3.Text = "Ngày hết hạn";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(782, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(500, 22);
-            this.textBox3.TabIndex = 72;
-            // 
-            // button4
-            // 
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.ImageIndex = 19;
-            this.button4.ImageList = this.iconsList;
-            this.button4.Location = new System.Drawing.Point(1214, 201);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 56);
-            this.button4.TabIndex = 71;
-            this.button4.Text = "Xóa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.ImageIndex = 19;
+            this.btnDel.ImageList = this.iconsList;
+            this.btnDel.Location = new System.Drawing.Point(1214, 201);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(102, 56);
+            this.btnDel.TabIndex = 71;
+            this.btnDel.Text = "Xóa";
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // iconsList
             // 
@@ -148,61 +161,57 @@
             this.iconsList.Images.SetKeyName(18, "signin1.png");
             this.iconsList.Images.SetKeyName(19, "unnamed.png");
             // 
-            // button3
+            // btnUpdate
             // 
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageIndex = 8;
-            this.button3.ImageList = this.iconsList;
-            this.button3.Location = new System.Drawing.Point(1064, 201);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 56);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "Sửa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.ImageIndex = 8;
+            this.btnUpdate.ImageList = this.iconsList;
+            this.btnUpdate.Location = new System.Drawing.Point(1064, 201);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(102, 56);
+            this.btnUpdate.TabIndex = 70;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 12;
-            this.button2.ImageList = this.iconsList;
-            this.button2.Location = new System.Drawing.Point(917, 201);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 56);
-            this.button2.TabIndex = 69;
-            this.button2.Text = "Lưu";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.ImageIndex = 12;
+            this.btnSave.ImageList = this.iconsList;
+            this.btnSave.Location = new System.Drawing.Point(917, 201);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(102, 56);
+            this.btnSave.TabIndex = 69;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 14;
-            this.button1.ImageList = this.iconsList;
-            this.button1.Location = new System.Drawing.Point(764, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 56);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.ImageIndex = 14;
+            this.btnAdd.ImageList = this.iconsList;
+            this.btnAdd.Location = new System.Drawing.Point(764, 201);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(102, 56);
+            this.btnAdd.TabIndex = 68;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label2
+            // lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(633, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 20);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "Ngày đăng ký";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(782, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(500, 22);
-            this.textBox2.TabIndex = 66;
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(633, 62);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(121, 20);
+            this.lbl.TabIndex = 67;
+            this.lbl.Text = "Ngày đăng ký";
             // 
             // label1
             // 
@@ -214,14 +223,15 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "Số thẻ";
             // 
-            // textBox1
+            // txtSoThe
             // 
-            this.textBox1.Location = new System.Drawing.Point(782, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(500, 22);
-            this.textBox1.TabIndex = 64;
+            this.txtSoThe.Location = new System.Drawing.Point(782, 21);
+            this.txtSoThe.Name = "txtSoThe";
+            this.txtSoThe.Size = new System.Drawing.Size(500, 22);
+            this.txtSoThe.TabIndex = 64;
+            this.txtSoThe.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSoThe_KeyDown);
             // 
-            // dataGridView1
+            // dgvTheXe
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -230,13 +240,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sothe,
-            this.ngaydk,
-            this.ngayhh,
-            this.tinhtrang});
+            this.dgvTheXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTheXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,12 +249,12 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 292);
-            this.dataGridView1.Name = "dataGridView1";
+            this.dgvTheXe.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTheXe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTheXe.EnableHeadersVisualStyles = false;
+            this.dgvTheXe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvTheXe.Location = new System.Drawing.Point(0, 292);
+            this.dgvTheXe.Name = "dgvTheXe";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,44 +262,29 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1328, 148);
-            this.dataGridView1.TabIndex = 65;
-            // 
-            // sothe
-            // 
-            this.sothe.HeaderText = "Số thẻ";
-            this.sothe.Name = "sothe";
-            // 
-            // ngaydk
-            // 
-            this.ngaydk.HeaderText = "Ngày đăng ký";
-            this.ngaydk.Name = "ngaydk";
-            // 
-            // ngayhh
-            // 
-            this.ngayhh.HeaderText = "Ngày hết hạn";
-            this.ngayhh.Name = "ngayhh";
-            // 
-            // tinhtrang
-            // 
-            this.tinhtrang.HeaderText = "Tình trạng";
-            this.tinhtrang.Name = "tinhtrang";
+            this.dgvTheXe.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTheXe.RowHeadersVisible = false;
+            this.dgvTheXe.RowHeadersWidth = 20;
+            this.dgvTheXe.RowTemplate.Height = 24;
+            this.dgvTheXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTheXe.Size = new System.Drawing.Size(1328, 148);
+            this.dgvTheXe.TabIndex = 65;
+            this.dgvTheXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTheXe_CellContentClick);
             // 
             // Frm_TheXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1328, 440);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTheXe);
             this.Controls.Add(this.panel1);
             this.Name = "Frm_TheXe";
             this.Text = "Frm_TheXe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_TheXe_FormClosing);
+            this.Load += new System.EventHandler(this.Frm_TheXe_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheXe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,22 +293,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSoThe;
         private System.Windows.Forms.ImageList iconsList;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sothe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaydk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayhh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tinhtrang;
+        private System.Windows.Forms.DataGridView dgvTheXe;
+        private System.Windows.Forms.DateTimePicker txtNgayDK;
+        private System.Windows.Forms.DateTimePicker txtNgayKT;
+        private System.Windows.Forms.ComboBox cbbStatus;
     }
 }

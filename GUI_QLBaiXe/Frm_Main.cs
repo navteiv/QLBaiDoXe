@@ -17,7 +17,6 @@ namespace GUI_QLBaiXe
             InitializeComponent();
         }
         Frm_NhanVien frmNV = new Frm_NhanVien();
-        Frm_LoaiXe frmLX = new Frm_LoaiXe();
         Frm_TheXe frmTX = new Frm_TheXe();
         private void btnNV_Click(object sender, EventArgs e)
         {
@@ -28,6 +27,8 @@ namespace GUI_QLBaiXe
            // frmNV.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             frmNV.Show();
         }
+
+        Frm_LoaiXe frmLX = new Frm_LoaiXe();
         private void btnLX_Click(object sender, EventArgs e)
         {
 

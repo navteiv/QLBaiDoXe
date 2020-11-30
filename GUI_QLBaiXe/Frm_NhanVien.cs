@@ -60,6 +60,12 @@ namespace GUI_QLBaiXe
         public void display()
         {
             dgvNhanVien.DataSource = dll.data(ID);
+            foreach (DataGridViewColumn col in dgvNhanVien.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
+                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
         
         private void Frm_NhanVien_FormClosing(object sender, FormClosingEventArgs e)

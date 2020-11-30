@@ -275,6 +275,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvNhanVien.RowHeadersVisible = false;
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.Size = new System.Drawing.Size(1426, 164);
             this.dgvNhanVien.TabIndex = 43;
