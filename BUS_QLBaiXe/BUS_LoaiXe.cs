@@ -10,6 +10,6 @@ namespace BUS_QLBaiXe
     {
         public string maLoai { get; set; }
         public string loaiXe { get; set; }
-        public int giaTien { get; set; }
+        public string giaTien { get; set; }
     }
 }

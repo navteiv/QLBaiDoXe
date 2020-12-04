@@ -61,6 +61,7 @@
             this.cbLoaiXe.Size = new System.Drawing.Size(219, 24);
             this.cbLoaiXe.TabIndex = 0;
             this.cbLoaiXe.Text = "Xe máy";
+            this.cbLoaiXe.SelectedIndexChanged += new System.EventHandler(this.cbLoaiXe_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -86,6 +87,7 @@
             this.cbbCamera.Name = "cbbCamera";
             this.cbbCamera.Size = new System.Drawing.Size(568, 24);
             this.cbbCamera.TabIndex = 11;
+            this.cbbCamera.SelectedIndexChanged += new System.EventHandler(this.cbbCamera_SelectedIndexChanged);
             // 
             // label6
             // 

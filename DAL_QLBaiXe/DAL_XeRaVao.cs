@@ -28,6 +28,8 @@ namespace DAL_QLBaiXe
             cmd.Parameters.Add("@biensoxe", SqlDbType.VarChar).Value = dt.bienSoXe;
             cmd.Parameters.Add("@AnhPhiaTruoc", SqlDbType.Image).Value = dt.anhTruoc;
             cmd.Parameters.Add("@TinhTrang", SqlDbType.Bit).Value = false;
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
             _conSql.Close();
         }
         public void XeRa(int ID)

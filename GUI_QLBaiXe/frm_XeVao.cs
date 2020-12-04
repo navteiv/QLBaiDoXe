@@ -21,6 +21,7 @@ namespace GUI_QLBaiXe
         {
             InitializeComponent();
         }
+        DBConnect cn = new DBConnect();
         FilterInfoCollection filterInfoCollection;
         public static VideoCaptureDevice videoSourceTruoc = new VideoCaptureDevice();
         DAL_XeRaVao dll = new DAL_XeRaVao();
@@ -50,8 +51,12 @@ namespace GUI_QLBaiXe
                 videoSourceTruoc.NewFrame += VideoSourceTruoc_NewFrame;
                 videoSourceTruoc.Start();
             }
+            cn.LoadCombobox(cbLoaiXe,"SELECT * FROM LOAIXE", "loaixe","maloai");
         }
-
+        public string GetGia()
+        {
+            return cn.loadLabel(@"SELECT giatien FROM LOAIXE where maloai='" + cbLoaiXe.SelectedValue.ToString() + "'");
+        }
         private void frm_XeVao_FormClosing(object sender, FormClosingEventArgs e)
         { 
            // videoSourceTruoc.Stop();
@@ -103,26 +108,91 @@ namespace GUI_QLBaiXe
         {
             return ImageToByteArray((Image)pictureBox2.Image.Clone());
         }
-
+        private bool checkMaThe(string Mathe)
+        {
+            string check = cn.loadLabel("Select count(*) from THE where sothe='" + Mathe + "'");
+            if (check == "0")
+            { return false; }
+            else
+            { return true; }
+        }
+        private bool CheckTheDangSuDung(string Mathe)
+        {
+            string check = cn.loadLabel("SELECT count(*) FROM XeRaVao where TinhTrang = 0  and   sothe='" + Mathe + "'");
+            if (check == "0")
+            { return true; }
+            else
+            { return false; }
+        }
         private void btnTiepNhan_Click(object sender, EventArgs e)
         {
             GetImg();
-            try
+            if (string.IsNullOrEmpty(cbLoaiXe.Text) || string.IsNullOrEmpty(txtSoThe.Text) || string.IsNullOrEmpty(txtBienSo.Text))
             {
-                BUS_XeRaVao ck = new BUS_XeRaVao();
-                ck.ngayGioVao = DateTime.Now;
-                ck.maLoai = cbLoaiXe.SelectedValue.ToString();
-                ck.soThe = txtSoThe.Text.ToUpper();
-                //ck.maNV = frm_DangNhap.MANV;
-                ck.bienSoXe = txtBienSo.Text;
-                ck.anhTruoc = GetImg();
-                dll.XeVao(ck);
-                MessageBox.Show("Thành công.", "Tiếp nhận xe vào bãi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                txtSoThe.Text = "";
-                txtBienSo.Text = "";
+                MessageBox.Show("Vui lòng nhập đủ thông tin.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
             }
-            catch (Exception)
-            { }
+            else
+            {
+                if (checkMaThe(txtSoThe.Text.ToUpper()))
+                {
+                    if (CheckTheDangSuDung(txtSoThe.Text.ToUpper()))
+                    {
+                        try
+                        {                           
+                            BUS_XeRaVao ck = new BUS_XeRaVao();
+                            ck.ngayGioVao = DateTime.Now;
+                            ck.maLoai = cbLoaiXe.SelectedValue.ToString();
+                            ck.soThe = txtSoThe.Text.ToUpper();
+                            //ck.maNV = frm_DangNhap.MANV;
+                            ck.bienSoXe = txtBienSo.Text;
+                            ck.anhTruoc = GetImg();
+                            dll.XeVao(ck);
+                            MessageBox.Show("Thành công.", "Tiếp nhận xe vào bãi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                            txtSoThe.Text = "";
+                            txtBienSo.Text = "";
+                        }
+                        catch
+                        { }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thẻ đã sử dụng.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Số thẻ không tồn tại.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                }
+            }           
+        }
+
+        private void cbLoaiXe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //try { .Text = GetGia(); }
+            //catch
+            //{ }
+        }
+
+        private void cbbCamera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //videoSourceTruoc = new VideoCaptureDevice();
+
+
+
+            //if (videoSourceTruoc.IsRunning)
+            //{
+            //    videoSourceTruoc.Stop();
+            //    picBoxCam.Image = null;
+            //    picBoxCam.Invalidate();
+
+            //}
+            //else
+            //{
+            //    videoSourceTruoc = new VideoCaptureDevice(filterInfoCollection[cbbCamera.SelectedIndex].MonikerString);
+            //    videoSourceTruoc.NewFrame += VideoSourceTruoc_NewFrame;
+            //    videoSourceTruoc.Start();
+            //}
         }
     }
 }

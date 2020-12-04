@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace DAL_QLBaiXe
 {
@@ -48,6 +49,15 @@ namespace DAL_QLBaiXe
             }
             connect.Close();
             return result;
+        }
+        public void LoadCombobox(ComboBox cb, string SQL, string DisplayMember, string ValueMember)
+        {
+            connect = getConnect();
+            connect.Open();
+            cb.DataSource = createTable(SQL);
+            cb.DisplayMember = DisplayMember;
+            cb.ValueMember = ValueMember;
+            connect.Close();
         }
         public string taomatudong(string truong, string table, string kieu)
         {
