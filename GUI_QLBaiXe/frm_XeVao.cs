@@ -63,13 +63,13 @@ namespace GUI_QLBaiXe
             this.Hide();
             this.Parent = null;
             e.Cancel = true;
-            if (videoSourceTruoc.IsRunning)
-            {
+            //if (videoSourceTruoc.IsRunning)
+            //{
                 videoSourceTruoc.Stop();
 
-                picBoxCam.Image = null;
-                picBoxCam.Invalidate();
-            }
+                //picBoxCam.Image = null;
+               // picBoxCam.Invalidate();
+           // }
         }
 
         //private void frm_XeVao_FormClosed(object sender, FormClosedEventArgs e)

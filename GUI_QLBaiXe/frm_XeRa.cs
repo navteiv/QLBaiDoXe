@@ -31,13 +31,18 @@ namespace GUI_QLBaiXe
         {
             picboxCam.Image = (Bitmap)eventArgs.Frame.Clone();         
         }
-
-
         private void frm_XeRa_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
             this.Parent = null;
             e.Cancel = true;
+            //if (videoSourceTruoc.IsRunning)
+           // {
+                videoSourceTruoc.Stop();
+
+                //picBoxCam.Image = null;
+                //picBoxCam.Invalidate();
+           // }
         }
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
@@ -56,9 +61,97 @@ namespace GUI_QLBaiXe
             else
             { return true; }
         }
+        string ID = "";
+        public void LockText()
+        {
+            txtSoThe.Focus();
+            txtBienSo.Enabled = false;
+            txtGiaTien.Enabled = false;
+            txtLoaiXe.Enabled = false;
+            txtGioVao.Enabled = false;
+        }
+
+
         private void frm_XeRa_Load(object sender, EventArgs e)
         {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection)
+            {
+                cbCamera.Items.Add(filterInfo.Name);
+            }
+            cbCamera.SelectedIndex = 0;
 
+            if (videoSourceTruoc.IsRunning)
+            {
+                videoSourceTruoc.Stop();
+
+                picboxCam.Image = null;
+                picboxCam.Invalidate();
+            }
+            else
+            {
+                videoSourceTruoc = new VideoCaptureDevice(filterInfoCollection[cbCamera.SelectedIndex].MonikerString);
+                videoSourceTruoc.NewFrame += videoSource_NewFrame;
+                videoSourceTruoc.Start();
+            }
+            LockText();
+        }
+
+        private void txtSoThe_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                pictureBox1.Image = picboxCam.Image;
+                //Bitmap img = (Bitmap)pictureBox2.Image;
+                if (checkMaThe(txtSoThe.Text.ToUpper()))
+                {                 
+                    dt.Clear();
+                    dt = dll.CheckXeRa(txtSoThe.Text.ToUpper());
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            txtLoaiXe.Text = dr["loaixe"].ToString();
+                            txtGiaTien.Text = dr["giatien"].ToString();
+                            txtBienSo.Text = dr["biensoxe"].ToString();
+                            try
+                            {
+                                txtGioVao.Value = (DateTime)dr["NgayGioVao"];
+                            }
+                            catch
+                            { }
+                            pictureBox2.Image = byteArrayToImage((byte[])dr["AnhPhiaTruoc"]);
+                            ID = dr["ID"].ToString();
+                        }
+                    }
+                    else
+                    { MessageBox.Show("Số thẻ không tồn tại hoặc thẻ chưa được sử dụng.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); }
+                }
+                else
+                {
+                    MessageBox.Show("Số thẻ không tồn tại.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                }
+            }
+        }
+
+        private void btnChoXeRa_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(ID))           
+            { MessageBox.Show("Chưa nhập số thẻ hoặc số thẻ không đúng.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); }
+            else
+            {
+                dll.XeRa(int.Parse(ID));
+                MessageBox.Show("Thành công", "Kiểm tra xe ra", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                txtLoaiXe.Text = "";
+                txtGiaTien.Text = "";
+                txtBienSo.Text = "";
+                txtSoThe.Text = "";
+                txtGioVao.Text = DateTime.Now.ToString();
+                pictureBox1.Image = null;
+                pictureBox2.Image = null;
+                ID = string.Empty;
+            }
         }
     }
 }
