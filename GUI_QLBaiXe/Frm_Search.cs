@@ -35,11 +35,18 @@ namespace GUI_QLBaiXe
                 {
                     string Sqltimkiem = SQL + " where XeRaVao.biensoxe = '" + txtTim.Text + "'";
                     dataGridView1.DataSource = cn.createTable(Sqltimkiem);
+
                 }
                 if (op1.Checked)
                 {
                     string Sqltimkiem = SQL + " where XeRaVao.sothe = '" + txtTim.Text + "'";
                     dataGridView1.DataSource = cn.createTable(Sqltimkiem);
+                }
+                foreach (DataGridViewColumn col in dataGridView1.Columns)
+                {
+                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    col.HeaderCell.Style.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             }
             catch
@@ -51,17 +58,22 @@ namespace GUI_QLBaiXe
             {               
                 string Sqltimkiem = SQL + " where XeRaVao.sothe = '" + txtTim.Text + "'";
                 dataGridView1.DataSource = cn.createTable(Sqltimkiem);
-                
+                foreach (DataGridViewColumn col in dataGridView1.Columns)
+                {
+                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    col.HeaderCell.Style.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
             }
         }
         private void Frm_Search_Load(object sender, EventArgs e)
         {
-            foreach (DataGridViewColumn col in dataGridView1.Columns)
-            {
-                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                col.HeaderCell.Style.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
-                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
+            //foreach (DataGridViewColumn col in dataGridView1.Columns)
+            //{
+            //    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //    col.HeaderCell.Style.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
+            //    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //}
         }
 
         
