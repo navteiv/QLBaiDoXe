@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL_QLBaiXe;
 using BUS_QLBaiXe;
+using System.Security.Cryptography;
+
 
 namespace GUI_QLBaiXe
 {
@@ -31,6 +33,7 @@ namespace GUI_QLBaiXe
             txtDiaChi.Text = "";
             txtCMND.Text = "";
             txtSDT.Text = "";
+            txtMatKhau.Text = "";
         }
         public void LockText()
         {
@@ -39,6 +42,7 @@ namespace GUI_QLBaiXe
             txtDiaChi.Enabled = false;
             txtCMND.Enabled = false;
             txtSDT.Enabled = false;
+            txtMatKhau.Enabled = false;
             btnAdd.Enabled = true;
             btnSave.Enabled = false;
             btnEdit.Enabled = true;
@@ -52,6 +56,7 @@ namespace GUI_QLBaiXe
             txtDiaChi.Enabled = true;
             txtCMND.Enabled = true;
             txtSDT.Enabled = true;
+            txtMatKhau.Enabled = true;
             btnAdd.Enabled = false;
             btnSave.Enabled = true;
             btnEdit.Enabled = false;
@@ -96,8 +101,24 @@ namespace GUI_QLBaiXe
             ck.CMND = txtCMND.Text;
             ck.diaChi = txtDiaChi.Text;
             ck.SDT = txtSDT.Text;
+            ck.matKhau = encryption(txtMatKhau.Text);
         }
+        // Mã hóa MD5
+        public string encryption(string password)
+        {
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            byte[] encrypt;
+            UTF8Encoding encode = new UTF8Encoding();
 
+            encrypt = md5.ComputeHash(encode.GetBytes(password));
+            StringBuilder encryptdata = new StringBuilder();
+
+            for (int i = 0; i < encrypt.Length; i++)
+            {
+                encryptdata.Append(encrypt[i].ToString());
+            }
+            return encryptdata.ToString();
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             getValues();
@@ -152,6 +173,7 @@ namespace GUI_QLBaiXe
         {
             themmoi = false;
             UnLockText();
+            txtMatKhau.Enabled = false;
             txtMaNV.Enabled = false;
         }
 

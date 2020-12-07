@@ -18,7 +18,7 @@ namespace DAL_QLBaiXe
         public void themNV(BUS_QLBaiXe.BUS_NhanVien nv)
         {
             con.ExcuteNonQuery("INSERT INTO NHANVIEN VALUES ('"+ nv.maNV + "', '" + nv.matKhau + "',N'" + nv.hoTen 
-                                                             + "', '" + nv.CMND + "',N'" + nv.diaChi + "', '" + nv.SDT + "')" );
+                                                             + "', '" + nv.CMND + "',N'" + nv.diaChi + "', '" + nv.SDT + "')");
         }
         public void xoaNV(BUS_QLBaiXe.BUS_NhanVien nv)
         {

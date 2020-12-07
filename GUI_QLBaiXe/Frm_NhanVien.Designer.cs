@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDel = new System.Windows.Forms.Button();
             this.iconsList = new System.Windows.Forms.ImageList(this.components);
             this.btnEdit = new System.Windows.Forms.Button();
@@ -56,6 +58,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl);
+            this.panel1.Controls.Add(this.txtMatKhau);
             this.panel1.Controls.Add(this.btnDel);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnSave);
@@ -76,6 +80,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1426, 251);
             this.panel1.TabIndex = 28;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(957, 113);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(82, 20);
+            this.lbl.TabIndex = 77;
+            this.lbl.Text = "MatKhau";
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Location = new System.Drawing.Point(1052, 111);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(362, 22);
+            this.txtMatKhau.TabIndex = 37;
             // 
             // btnDel
             // 
@@ -170,7 +192,7 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(1040, 71);
+            this.txtDiaChi.Location = new System.Drawing.Point(1052, 71);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(362, 22);
             this.txtDiaChi.TabIndex = 36;
@@ -187,7 +209,7 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(1040, 28);
+            this.txtSDT.Location = new System.Drawing.Point(1052, 28);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(362, 22);
             this.txtSDT.TabIndex = 34;
@@ -320,5 +342,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ImageList iconsList;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txtMatKhau;
     }
 }

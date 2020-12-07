@@ -41,6 +41,7 @@
     <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,8 +64,14 @@
     <Compile Include="Frm_LoaiXe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_LoaiXe.Designer.cs">
+    <Compile Include="Frm_LoaiXe.designer.cs">
       <DependentUpon>Frm_LoaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Main.cs">
       <SubType>Form</SubType>
@@ -110,6 +117,9 @@
     <EmbeddedResource Include="Frm_LoaiXe.resx">
       <DependentUpon>Frm_LoaiXe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,7 +146,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="icons\12.webp" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,6 +172,28 @@
       <Project>{ae75176f-a2f0-47e0-84f3-1d64754fbf1b}</Project>
       <Name>DAL_QLBaiXe</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\108282279_899258063911620_5053503532840909895_n.png" />
+    <Content Include="icons\1375593-200.png" />
+    <Content Include="icons\46271.png" />
+    <Content Include="icons\bank-card-back-side.png" />
+    <Content Include="icons\cross+exit+remove+icon-1320161389317562876.png" />
+    <Content Include="icons\file-icons-free-download-png-and-svg-file-icon-png-256_256.png" />
+    <Content Include="icons\icon-customer-0.jpg" />
+    <Content Include="icons\icons_next-512 - Copy.png" />
+    <Content Include="icons\img_297675.png" />
+    <Content Include="icons\img_90938.png" />
+    <Content Include="icons\motorcycle-icon-trendy-design-sticker-1577491703.849943.png" />
+    <Content Include="icons\next.png" />
+    <Content Include="icons\Paomedia-Small-N-Flat-Floppy.ico" />
+    <Content Include="icons\person-male.png" />
+    <Content Include="icons\plus-icon-green-clip-art-clkerm-vector-clip-art-0.png" />
+    <Content Include="icons\pre %282%29.png" />
+    <Content Include="icons\pre.png" />
+    <Content Include="icons\search-131964753234672616.png" />
+    <Content Include="icons\signin1.png" />
+    <Content Include="icons\unnamed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

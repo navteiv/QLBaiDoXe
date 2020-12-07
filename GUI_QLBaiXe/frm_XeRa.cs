@@ -40,9 +40,10 @@ namespace GUI_QLBaiXe
            // {
                 videoSourceTruoc.Stop();
 
-                //picBoxCam.Image = null;
-                //picBoxCam.Invalidate();
-           // }
+            //picBoxCam.Image = null;
+            //picBoxCam.Invalidate();
+            // }
+            Application.Exit();
         }
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
@@ -84,9 +85,14 @@ namespace GUI_QLBaiXe
             if (videoSourceTruoc.IsRunning)
             {
                 videoSourceTruoc.Stop();
-
+                //videoSourceTruoc = null;
+                //videoSourceTruoc = new VideoCaptureDevice(filterInfoCollection[cbCamera.SelectedIndex].MonikerString);
+                //videoSourceTruoc.NewFrame += videoSource_NewFrame;
+                //videoSourceTruoc.Start();
                 picboxCam.Image = null;
                 picboxCam.Invalidate();
+                pictureBox2.Image = null;
+                pictureBox2.Invalidate();
             }
             else
             {
@@ -152,6 +158,12 @@ namespace GUI_QLBaiXe
                 pictureBox2.Image = null;
                 ID = string.Empty;
             }
+        }
+
+        private void frm_XeRa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }

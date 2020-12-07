@@ -313,6 +313,7 @@
             this.Name = "frm_XeRa";
             this.Text = "frm_XeRa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_XeRa_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_XeRa_FormClosed);
             this.Load += new System.EventHandler(this.frm_XeRa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

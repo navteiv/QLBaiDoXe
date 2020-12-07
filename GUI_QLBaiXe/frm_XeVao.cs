@@ -41,12 +41,16 @@ namespace GUI_QLBaiXe
             if (videoSourceTruoc.IsRunning)
             {
                 videoSourceTruoc.Stop();
-
-                picBoxCam.Image = null;
-                picBoxCam.Invalidate();
+                //videoSourceTruoc = null;
+                //videoSourceTruoc = new VideoCaptureDevice(filterInfoCollection[cbbCamera.SelectedIndex].MonikerString);
+                //videoSourceTruoc.NewFrame += VideoSourceTruoc_NewFrame;
+                //videoSourceTruoc.Start();
+                pictureBox2.Image = null;
+                pictureBox2.Invalidate();
             }
             else
             {
+                videoSourceTruoc = null;
                 videoSourceTruoc = new VideoCaptureDevice(filterInfoCollection[cbbCamera.SelectedIndex].MonikerString);
                 videoSourceTruoc.NewFrame += VideoSourceTruoc_NewFrame;
                 videoSourceTruoc.Start();
@@ -63,13 +67,13 @@ namespace GUI_QLBaiXe
             this.Hide();
             this.Parent = null;
             e.Cancel = true;
-            //if (videoSourceTruoc.IsRunning)
-            //{
+            if (videoSourceTruoc.IsRunning)
+            {
                 videoSourceTruoc.Stop();
 
-                //picBoxCam.Image = null;
-               // picBoxCam.Invalidate();
-           // }
+                picBoxCam.Image = null;
+                picBoxCam.Invalidate();
+            }
         }
 
         //private void frm_XeVao_FormClosed(object sender, FormClosedEventArgs e)
@@ -193,6 +197,11 @@ namespace GUI_QLBaiXe
             //    videoSourceTruoc.NewFrame += VideoSourceTruoc_NewFrame;
             //    videoSourceTruoc.Start();
             //}
+        }
+
+        private void frm_XeVao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
