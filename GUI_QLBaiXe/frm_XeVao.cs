@@ -128,6 +128,18 @@ namespace GUI_QLBaiXe
             else
             { return false; }
         }
+        private bool CheckHSD(string mathe)
+        {
+            string check = cn.loadLabel("SELECT COUNT(*) FROM The WHERE (TinhTrang = N'Đang chờ cấp') OR TinhTrang = N'Thẻ hỏng' OR (NgayKt < GETDATE()) AND SoThe = '" + mathe + "'");
+            if (check == "0")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void btnTiepNhan_Click(object sender, EventArgs e)
         {
             GetImg();
@@ -142,22 +154,29 @@ namespace GUI_QLBaiXe
                 {
                     if (CheckTheDangSuDung(txtSoThe.Text.ToUpper()))
                     {
-                        try
-                        {                           
-                            BUS_XeRaVao ck = new BUS_XeRaVao();
-                            ck.ngayGioVao = DateTime.Now;
-                            ck.maLoai = cbLoaiXe.SelectedValue.ToString();
-                            ck.soThe = txtSoThe.Text.ToUpper();
-                            //ck.maNV = frm_DangNhap.MANV;
-                            ck.bienSoXe = txtBienSo.Text;
-                            ck.anhTruoc = GetImg();
-                            dll.XeVao(ck);
-                            MessageBox.Show("Thành công.", "Tiếp nhận xe vào bãi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                            txtSoThe.Text = "";
-                            txtBienSo.Text = "";
+                        if (CheckHSD(txtSoThe.Text.ToUpper()))
+                        {
+                            try
+                            {
+                                BUS_XeRaVao ck = new BUS_XeRaVao();
+                                ck.ngayGioVao = DateTime.Now;
+                                ck.maLoai = cbLoaiXe.SelectedValue.ToString();
+                                ck.soThe = txtSoThe.Text.ToUpper();
+                                ck.maNV = Frm_Login.MaNV;
+                                ck.bienSoXe = txtBienSo.Text;
+                                ck.anhTruoc = GetImg();
+                                dll.XeVao(ck);
+                                MessageBox.Show("Thành công.", "Tiếp nhận xe vào bãi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                                txtSoThe.Text = "";
+                                txtBienSo.Text = "";
+                            }
+                            catch
+                            { }
                         }
-                        catch
-                        { }
+                        else
+                        {
+                            MessageBox.Show("Thẻ hỏng hoặc hết hạn sử dụng", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {

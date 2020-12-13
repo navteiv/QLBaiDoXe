@@ -24,7 +24,8 @@ namespace DAL_QLBaiXe
         }
         public void suaThe(BUS_QLBaiXe.BUS_The the)
         {
-            connect.ExcuteNonQuery("UPDATE THE SET NgayDk = '" + the.ngayDK + "', NgayKT = '" + the.ngayKT + "', TinhTrang = N'" + the.tinhTrang + "' WHERE SoThe = '" + the.soThe + "'");
+            connect.ExcuteNonQuery("UPDATE THE SET NgayDk = '" + the.ngayDK + "', NgayKT = '" + the.ngayKT + "', TinhTrang = N'" 
+                                    + the.tinhTrang + "' WHERE SoThe = '" + the.soThe + "'");
         }
         public DataTable data()
         {

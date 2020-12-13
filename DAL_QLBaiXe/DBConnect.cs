@@ -66,7 +66,8 @@ namespace DAL_QLBaiXe
 
             connect = getConnect();
             connect.Open();
-            string str = "select right(" + truong + ",6) as ma  from " + table + " where right(" + truong + ",6) >= All(select right(" + truong + ",6) as ma from " + table + ")";
+            string str = "select right(" + truong + ",6) as ma  from " + table + 
+            " where right(" + truong + ",6) >= All(select right(" + truong + ",6) as ma from " + table + ")";
             SqlCommand cm1 = new SqlCommand(str, connect);
             SqlDataAdapter da = new SqlDataAdapter(cm1);
 

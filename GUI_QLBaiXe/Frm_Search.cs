@@ -75,7 +75,5 @@ namespace GUI_QLBaiXe
             //    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             //}
         }
-
-        
     }
  }

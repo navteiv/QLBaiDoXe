@@ -26,7 +26,8 @@ namespace DAL_QLBaiXe
         }
         public void suaNV(BUS_QLBaiXe.BUS_NhanVien nv)
         {
-            con.ExcuteNonQuery("UPDATE NHANVIEN set HoTen = N'" + nv.hoTen + "', CMND ='" + nv.CMND + "', DiaChi = '" + nv.diaChi + "',SDT = '" + nv.SDT + "' where manv = '" + nv.maNV + "'" );
+            con.ExcuteNonQuery("UPDATE NHANVIEN set HoTen = N'" + nv.hoTen + "', CMND ='" + nv.CMND + "', DiaChi = '" + nv.diaChi
+                                + "',SDT = '" + nv.SDT + "' where manv = '" + nv.maNV + "'" );
         }
         public void doiMK(BUS_QLBaiXe.BUS_NhanVien nv)
         {
