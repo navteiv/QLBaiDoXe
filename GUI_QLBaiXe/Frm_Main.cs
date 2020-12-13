@@ -108,14 +108,9 @@ namespace GUI_QLBaiXe
 
         private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
-        private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-
-        }
 
         private void Frm_Main_Load(object sender, EventArgs e)
         {

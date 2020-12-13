@@ -32,7 +32,7 @@ namespace DAL_QLBaiXe
             cmd.Dispose();
             _conSql.Close();
         }
-        public void XeRa(int ID)
+        public void XeRa(int ID, int GiaTien)
         {
             _conSql = con.getConnect();
             _conSql.Open();
@@ -41,6 +41,7 @@ namespace DAL_QLBaiXe
             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
             cmd.Parameters.Add("@TinhTrang", SqlDbType.Bit).Value = true;
             cmd.Parameters.Add("@NgayGioRa", SqlDbType.DateTime).Value = DateTime.Now;
+            cmd.Parameters.Add("@GiaTien", SqlDbType.Int).Value = GiaTien;
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             _conSql.Close();

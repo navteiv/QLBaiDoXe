@@ -33,9 +33,30 @@ namespace GUI_QLBaiXe
                 int DoanhThu = 0;
                 string tungay = dtTuNgay.Value.ToString("yyyy-MM-dd HH:mm:ss");
                 string DenNgay = dtDenNgay.Value.ToString("yyyy-MM-dd HH:mm:ss");
-                sql = @"SELECT XeRaVao.NgayGioVao, XeRaVao.NgayGioRa, XeRaVao.sothe, LOAIXE.loaixe, LOAIXE.giatien, XeRaVao.biensoxe, XeRaVao.TinhTrang
+                if (cbLoaiXe.Text == "ALL")
+                {
+                    sql = @"SELECT XeRaVao.NgayGioVao, XeRaVao.NgayGioRa, XeRaVao.sothe, LOAIXE.loaixe, XeRaVao.giatien, XeRaVao.biensoxe, XeRaVao.TinhTrang
                         FROM XeRaVao INNER JOIN LOAIXE ON XeRaVao.maloai = LOAIXE.maloai 
-                        WHERE( XeRaVao.NgayGioVao >= '"+ tungay + "' AND XeRaVao.NgayGioVao <= '"+ DenNgay +"')";
+                        WHERE( XeRaVao.NgayGioVao >= '" + tungay + "' AND XeRaVao.NgayGioVao <= '" + DenNgay + "')";
+                }
+                else if (cbLoaiXe.Text == "Xe máy")
+                {
+                    sql = @"SELECT XeRaVao.NgayGioVao, XeRaVao.NgayGioRa, XeRaVao.sothe, LOAIXE.loaixe, XeRaVao.giatien, XeRaVao.biensoxe, XeRaVao.TinhTrang
+                        FROM XeRaVao INNER JOIN LOAIXE ON XeRaVao.maloai = LOAIXE.maloai 
+                        WHERE( XeRaVao.NgayGioVao >= '" + tungay + "' AND XeRaVao.NgayGioVao <= '" + DenNgay + "') AND LOAIXE.loaixe = N'Xe Máy'";
+                }
+                else if (cbLoaiXe.Text == "Xe hơi")
+                {
+                    sql = @"SELECT XeRaVao.NgayGioVao, XeRaVao.NgayGioRa, XeRaVao.sothe, LOAIXE.loaixe, XeRaVao.giatien, XeRaVao.biensoxe, XeRaVao.TinhTrang
+                        FROM XeRaVao INNER JOIN LOAIXE ON XeRaVao.maloai = LOAIXE.maloai 
+                        WHERE( XeRaVao.NgayGioVao >= '" + tungay + "' AND XeRaVao.NgayGioVao <= '" + DenNgay + "') AND LOAIXE.loaixe = N'Xe Hơi'";
+                }
+                else
+                {
+                    sql = @"SELECT XeRaVao.NgayGioVao, XeRaVao.NgayGioRa, XeRaVao.sothe, LOAIXE.loaixe, XeRaVao.giatien, XeRaVao.biensoxe, XeRaVao.TinhTrang
+                        FROM XeRaVao INNER JOIN LOAIXE ON XeRaVao.maloai = LOAIXE.maloai 
+                        WHERE( XeRaVao.NgayGioVao >= '" + tungay + "' AND XeRaVao.NgayGioVao <= '" + DenNgay + "') AND LOAIXE.loaixe = N'Xe Đạp'";
+                }
                 dataGridView1.DataSource = cn.createTable(sql);
                 foreach (DataGridViewColumn col in dataGridView1.Columns)
                 {
@@ -47,13 +68,24 @@ namespace GUI_QLBaiXe
                 for (int i = 0; i < sc - 1; i++)
                     DoanhThu += int.Parse(dataGridView1.Rows[i].Cells["giatien"].Value.ToString());
                 lblDoanhThu.Text = DoanhThu.ToString();
+
+                lblXeTon.Text = cn.loadLabel("SELECT COUNT(*) FROM XERAVAO WHERE NgayGioRa is NULL");
+
             }
             catch (Exception)
             {
 
             }
             
+        }
 
+        private void Frm_DoanhThu_Load(object sender, EventArgs e)
+        {
+            cbLoaiXe.Items.Add("Xe máy");
+            cbLoaiXe.Items.Add("Xe đạp");
+            cbLoaiXe.Items.Add("Xe hơi");
+            int nReturn = cbLoaiXe.Items.Add("ALL");
+            cbLoaiXe.SelectedIndex = nReturn;
         }
     }
 }

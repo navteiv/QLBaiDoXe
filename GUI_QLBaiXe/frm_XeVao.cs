@@ -201,7 +201,7 @@ namespace GUI_QLBaiXe
 
         private void frm_XeVao_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
     }
 }

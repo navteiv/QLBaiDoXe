@@ -62,7 +62,7 @@ namespace GUI_QLBaiXe
             else
             { return true; }
         }
-        string ID = "";
+        string ID = ""; int GiaTien = 0;
         public void LockText()
         {
             txtSoThe.Focus();
@@ -128,6 +128,13 @@ namespace GUI_QLBaiXe
                             { }
                             pictureBox2.Image = byteArrayToImage((byte[])dr["AnhPhiaTruoc"]);
                             ID = dr["ID"].ToString();
+                            int soNgay = Convert.ToInt16(dr["SoNgay"]);
+                            if (soNgay == 0)
+                            {
+                                soNgay = 1;
+                            }
+                            GiaTien = Convert.ToInt16(txtGiaTien.Text) * soNgay;
+                            txtGiaTien.Text = GiaTien.ToString();
                         }
                     }
                     else
@@ -147,7 +154,7 @@ namespace GUI_QLBaiXe
             { MessageBox.Show("Chưa nhập số thẻ hoặc số thẻ không đúng.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); }
             else
             {
-                dll.XeRa(int.Parse(ID));
+                dll.XeRa(int.Parse(ID), GiaTien);
                 MessageBox.Show("Thành công", "Kiểm tra xe ra", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 txtLoaiXe.Text = "";
                 txtGiaTien.Text = "";
@@ -162,7 +169,7 @@ namespace GUI_QLBaiXe
 
         private void frm_XeRa_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
 
         }
     }
