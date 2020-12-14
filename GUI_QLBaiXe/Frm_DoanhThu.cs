@@ -66,7 +66,9 @@ namespace GUI_QLBaiXe
                 }
                 int sc = dataGridView1.Rows.Count;
                 for (int i = 0; i < sc - 1; i++)
+                {
                     DoanhThu += int.Parse(dataGridView1.Rows[i].Cells["giatien"].Value.ToString());
+                }
                 lblDoanhThu.Text = DoanhThu.ToString();
 
                 lblXeTon.Text = cn.loadLabel("SELECT COUNT(*) FROM XERAVAO WHERE NgayGioRa is NULL");

@@ -135,7 +135,12 @@ namespace GUI_QLBaiXe
                             }
                             GiaTien = Convert.ToInt16(txtGiaTien.Text) * soNgay;
                             txtGiaTien.Text = GiaTien.ToString();
-                        }
+                            if (checkTheThanhVien(txtSoThe.Text))
+                            {
+                                GiaTien = 0;
+                                txtGiaTien.Text = "0";
+                            }
+                        }        
                     }
                     else
                     { MessageBox.Show("Số thẻ không tồn tại hoặc thẻ chưa được sử dụng.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); }
@@ -147,7 +152,18 @@ namespace GUI_QLBaiXe
                 }
             }
         }
-
+        private bool checkTheThanhVien(string mathe)
+        {
+            string check = cn.loadLabel("SELECT COUNT(*) FROM The WHERE (TinhTrang = N'Thẻ thành viên') AND (NgayKt > GETDATE()) AND (SoThe = '" + mathe + "')");
+            if (check == "1")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void btnChoXeRa_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(ID))           

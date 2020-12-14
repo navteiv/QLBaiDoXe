@@ -130,7 +130,7 @@ namespace GUI_QLBaiXe
         }
         private bool CheckHSD(string mathe)
         {
-            string check = cn.loadLabel("SELECT COUNT(*) FROM The WHERE (TinhTrang = N'Đang chờ cấp') OR TinhTrang = N'Thẻ hỏng' OR (NgayKt < GETDATE()) AND SoThe = '" + mathe + "'");
+            string check = cn.loadLabel("SELECT COUNT(*) FROM The WHERE ((TinhTrang = N'Thẻ hỏng') OR (NgayKt < GETDATE())) AND SoThe = '" + mathe + "'");
             if (check == "0")
             {
                 return true;
